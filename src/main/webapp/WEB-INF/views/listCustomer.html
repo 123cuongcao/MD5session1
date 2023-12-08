@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a th:href="@{/addForm}">Thêm người dùng mới</a>
+<table >
+    <thead>
+    <th>Id</th>
+    <th>Tên người dùng</th>
+    <th>Số điện thoại</th>
+    <th>Ngày sinh</th>
+    <th>Giờ tính</th>
+    </thead>
+    <tbody>
+    <tr th:each="c : ${list}">
+        <td th:text="${c.id}"></td>
+        <td th:text="${c.name}"></td>
+        <td th:text="${c.phoneNumber}"></td>
+        <td th:text="${c.birthday}"></td>
+        <td th:text="${c.sex?'Nam':'Nữ'}"></td>
+    </tr>
+
+    </tbody>
+</table>
+</body>
+</html>
